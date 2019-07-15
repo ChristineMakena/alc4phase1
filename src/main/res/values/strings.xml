@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Alc 4.0 phase 1 challenge</string>
+    <string name="title_activity_b">ActivityB</string>
+    <string name="title_activity_c">ActivityC</string>
+</resources>
