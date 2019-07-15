@@ -1,6 +1,7 @@
 package com.christine.makena.alc40phase1challenge;
 
 import android.annotation.TargetApi;
+import android.net.http.SslError;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -10,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.webkit.SslErrorHandler;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
@@ -17,7 +19,7 @@ import android.webkit.WebViewClient;
 import android.widget.Toast;
 
 public class ActivityB extends AppCompatActivity {
-    WebView alc_webview;
+    WebView alc_webView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,22 +28,18 @@ public class ActivityB extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        alc_webview = (WebView) findViewById(R.id.alc_webview);
+        alc_webView = (WebView) findViewById(R.id.alc_webView);
 
-        alc_webview.setWebViewClient(new WebViewClient() {
-            @SuppressWarnings("deprecation")
+        alc_webView.setWebViewClient(new WebViewClient(){
             @Override
-            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
-                Toast.makeText(ActivityB.this, description, Toast.LENGTH_SHORT).show();
-            }
-            @TargetApi(android.os.Build.VERSION_CODES.M)
-            @Override
-            public void onReceivedError(WebView view, WebResourceRequest req, WebResourceError rerr) {
-                onReceivedError(view, rerr.getErrorCode(), rerr.getDescription().toString(), req.getUrl().toString());
+            public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
+                handler.proceed();
             }
         });
+        alc_webView.loadUrl("https://maps.google.co.in/");
 
-        alc_webview.loadUrl("https://andela.com/alc/");
+
+        alc_webView.loadUrl("https://andela.com/alc/");
 
 
     }

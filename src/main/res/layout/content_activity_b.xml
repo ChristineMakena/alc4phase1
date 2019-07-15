@@ -9,7 +9,8 @@
     tools:showIn="@layout/activity_b">
 
     <WebView
-        android:id="@+id/alc_webview"
+        android:id="@+id/alc_webView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+    
 </androidx.constraintlayout.widget.ConstraintLayout>
