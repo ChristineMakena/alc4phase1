@@ -30,7 +30,12 @@
             android:textStyle="bold"
             android:textAlignment="center"
             android:fontFamily="sans-serif-condensed"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"/>
 
         <TextView
             android:id="@+id/textView4"
@@ -40,7 +45,7 @@
             android:text="Track: Android development"
             android:fontFamily="sans-serif-condensed"
             android:textAppearance="@color/design_default_color_primary_dark"
-            android:textSize="15sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView2"
@@ -50,7 +55,7 @@
             android:text="Country: Kenya"
             android:fontFamily="sans-serif-condensed"
             android:textAppearance="@color/design_default_color_primary_dark"
-            android:textSize="15sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView3"
@@ -60,7 +65,7 @@
             android:text="Email: christine4makena@gmail.com"
             android:fontFamily="sans-serif-condensed"
             android:textAppearance="@color/design_default_color_primary_dark"
-            android:textSize="15sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView5"
@@ -70,6 +75,6 @@
             android:text="Slack Username: @Makena"
             android:fontFamily="sans-serif-condensed"
             android:textAppearance="@color/design_default_color_primary_dark"
-            android:textSize="15sp" />
+            android:textSize="18sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

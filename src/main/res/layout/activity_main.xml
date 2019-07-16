@@ -11,9 +11,11 @@
         tools:ignore="MissingConstraints"
         android:text="Welcome to ALC 4.0"
         android:fontFamily="sans-serif-black"
+        android:textColor="@android:color/black"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textSize="35sp"
         android:textStyle="bold"
+        android:paddingTop="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"/>
 
@@ -26,27 +28,31 @@
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:text="ABOUT ALC"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:fontFamily="sans-serif-black"
             android:textAppearance="@style/CardView.Dark"
             android:textStyle="bold"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:radius="10dp"
+            android:background="@drawable/rounded_button"/>
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:text="MY PROFILE"
             android:fontFamily="sans-serif-black"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textAppearance="@style/CardView.Dark"
             android:textStyle="bold"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_button"
+            android:radius="10dp"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

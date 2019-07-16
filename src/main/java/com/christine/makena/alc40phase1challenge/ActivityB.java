@@ -28,7 +28,20 @@ public class ActivityB extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("About ALC");
         alc_webView = (WebView) findViewById(R.id.alc_webView);
+
+        alc_webView.getSettings().setJavaScriptEnabled(true);
+        alc_webView.getSettings().setAppCacheEnabled(true);
+        alc_webView.getSettings().setDatabaseEnabled(true);
+        alc_webView.getSettings().setDomStorageEnabled(true);
+        alc_webView.getSettings().setSupportZoom(true);
+        alc_webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+        alc_webView.getSettings().setBuiltInZoomControls(true);
+        //webView.setWebViewClient(new GeoWebViewClient());
+        // Below required for geolocation
+
+        alc_webView.getSettings().setGeolocationEnabled(true);
 
         alc_webView.setWebViewClient(new WebViewClient(){
             @Override
